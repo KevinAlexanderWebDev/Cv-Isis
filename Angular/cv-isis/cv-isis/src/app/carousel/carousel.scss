@@ -108,7 +108,7 @@
 
 @media (min-width: 769px) {
   .touch-hint {
-    display: none;
+    display: none !important;
   }
 }
 
