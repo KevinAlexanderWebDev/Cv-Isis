@@ -1,0 +1,107 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/efects" as mixins;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+
+  .home-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .intro {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 2rem 1.5rem;
+    background-color: $background-color;
+    color: $text-color;
+    border-left: 4px solid $accent-color;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: $primary-color;
+    }
+
+    .highlight {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $accent-color;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: darken($text-color, 10%);
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1rem;
+      color: $primary-color;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      border-left: 3px solid $accent-color;
+      background-color: lighten($background-color, 5%);
+      border-radius: 6px;
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-delay-2 {
+  animation-delay: 0.4s;
+}
+
+:host-context(body.dark-mode) {
+  .intro {
+    @include mixins.mirror-glow;
+    background-color: $dark-background-color;
+    color: $dark-text-color;
+    border: none;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+
+    h2 {
+      color: $dark-primary-color;
+    }
+
+    .highlight {
+      color: $dark-accent-color;
+    }
+
+    p {
+      color: lighten($dark-text-color, 10%);
+    }
+
+    .quote {
+      color: $dark-primary-color;
+      border-left-color: $dark-accent-color;
+      background-color: darken($dark-background-color, 5%);
+    }
+  }
+}
+
