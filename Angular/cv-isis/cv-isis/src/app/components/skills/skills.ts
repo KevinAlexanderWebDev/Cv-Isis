@@ -29,6 +29,11 @@ export class Skills {
 
   skills = [
     {
+      icon: '👩‍⚕️',
+      title: 'Salud y vida saludable',
+      description: 'Área de la salud como técnica en enfermería, conocimientos en nutrición, atención al adulto mayor y al infante.',
+    },
+    {
       icon: '🤝',
       title: 'Atención al cliente',
       description: 'Empática, clara y resolutiva en el trato con personas.',

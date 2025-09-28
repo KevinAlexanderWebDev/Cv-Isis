@@ -39,7 +39,15 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "outputHashing": "all",
+            "optimization": true,
+            "sourceMap": false,
+            "namedChunks": false,
+            "aot": true,
+            "extractLicenses": true,
+            "vendorChunk": false,
+            "buildOptimizer": true
           },
           "configurations": {
             "production": {
@@ -54,21 +62,11 @@
                   "maximumWarning": "4kB",
                   "maximumError": "8kB"
                 }
-              ],
-              "outputHashing": "all",
-              "optimization": true,
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              ]
             },
             "development": {
               "optimization": false,
               "sourceMap": true,
-              "extractCss": false,
               "namedChunks": true,
               "aot": false,
               "vendorChunk": true,
