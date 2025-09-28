@@ -76,7 +76,7 @@ export class Layout implements OnInit, AfterViewInit {
           e.preventDefault();
           const name = (document.getElementById('name') as HTMLInputElement)?.value || '';
           const message = (document.getElementById('message') as HTMLTextAreaElement)?.value || '';
-          const phone = '5211234567890';
+          const phone = '528136968539';
 
           const url = `https://wa.me/${phone}?text=${encodeURIComponent(`Hola, soy ${name}. ${message}`)}`;
           window.open(url, '_blank');
